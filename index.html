@@ -1,0 +1,90 @@
+<head>
+ <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+ <script src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
+<script src="https://rawgit.com/aframevr/aframe/b813db0614ac2b518e547105e810b5b6eccfe1c8/dist/aframe.min.js"></script>
+  
+  
+</head>
+
+<script>
+  AFRAME.registerComponent('set-sky', {
+    schema: {default:''},
+    init() {
+      const sky = document.querySelector('a-sky');
+      this.el.addEventListener('click', () => {
+        sky.setAttribute('src', this.data);
+      });
+    }
+  });
+</script>
+<a-scene>
+  
+
+
+
+
+
+  <a-sphere color="#ffffff" src="https://i.imgur.com/v4XJ81c.png" radius="0.75" position="-4 3.5 -7" rotation="0 -65 0" >
+
+
+  </a-sphere>
+
+
+<a-box position="-1 3.5 -7" width="4" height="1" depth=".00001"  color="#ffffff" src="https://i.imgur.com/dGy4xwn.png" transparent="true">
+ <a-animation attribute="scale" begin="mouseenter" to="1.07 1.07 1.07" easing="ease-in-out" dur="500">
+    </a-animation>
+    <a-animation attribute="scale" begin="mouseleave" from="1.07 1.07 1.07" to="1 1 1" easing="ease-in-out" dur="300">  
+    </a-animation>
+</a-box>
+
+
+
+   <a-box src="https://i.imgur.com/Fv8nraa.png" width="2" height="2" depth=".1" set-sky="https://i.imgur.com/FbHhpHq.jpg"    position="-4.5 1.5 -8" rotation="0 0 0">
+    <a-animation attribute="scale" begin="mouseenter" to="1.07 1.07 1.07" easing="ease-in-out" dur="500">
+    </a-animation>
+    <a-animation attribute="scale" begin="mouseleave" from="1.07 1.07 1.07" to="1 1 1" easing="ease-in-out" dur="300">  
+    </a-animation>
+  </a-box>
+
+
+
+
+
+     <a-box src="https://i.imgur.com/jkphTgo.png"  width="2" height="2" depth=".1" set-sky="https://i.imgur.com/MIzJLnL.jpg" position="-2 1.5 -8" rotation="0 0 0">
+    <a-animation attribute="scale" begin="mouseenter" to="1.07 1.07 1.07" easing="ease-in-out" dur="500">
+    </a-animation>
+    <a-animation attribute="scale" begin="mouseleave" from="1.07 1.07 1.07" to="1 1 1" easing="ease-in-out" dur="300">  
+    </a-animation>
+  </a-box>
+
+
+
+
+
+
+
+   <a-box src="https://i.imgur.com/rQbU6mH.png"  width="2" height="2" depth=".1" set-sky="https://i.imgur.com/W15fv5w.jpg" position=".5 1.5 -8" rotation="0 0 0">
+    <a-animation attribute="scale" begin="mouseenter" to="1.07 1.07 1.07" easing="ease-in-out" dur="500">
+    </a-animation>
+    <a-animation attribute="scale" begin="mouseleave" from="1.07 1.07 1.07" to="1 1 1" easing="ease-in-out" dur="300">  
+    </a-animation>
+  </a-box>
+
+
+
+
+     <a-box src="https://i.imgur.com/Xjsuw0R.png"  width="7" height="2" depth=".1" set-sky="https://i.imgur.com/XHxPby0.jpg" position="-2 -1 -8" rotation="0 0 0">
+    <a-animation attribute="scale" begin="mouseenter" to="1.08 1.08 1.08" easing="ease-in-out" dur="500">
+    </a-animation>
+    <a-animation attribute="scale" begin="mouseleave" from="1.08 1.08 1.08" to="1 1 1" easing="ease-in-out" dur="300">  
+    </a-animation>
+  </a-box>
+
+
+
+
+  <a-camera position="0 1 5">
+    <a-cursor color="#2E3A87">
+  </a-camera>
+  <a-sky src="https://i.imgur.com/oUgUYZ0.jpg" rotation=" 0 270 0"></a-sky>
+</a-scene>
